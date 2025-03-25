@@ -1,5 +1,4 @@
-def imprime_tapete_de_porta(N):
-    M = 3 * N
+def imprime_tapete_de_porta(N, M):
     bem_vindo = "WELCOME"
     linha_central = (N // 2)
     for i in range(N):
@@ -12,5 +11,8 @@ def imprime_tapete_de_porta(N):
             padrao = padrao.center(M, "-")
             print(padrao)
 
-N = 7
-imprime_tapete_de_porta(N)
+N, M = map(int, input().split())
+if N % 2 == 0:
+    print("Por favor, N deve ser um número ímpar.")
+else:
+imprime_tapete_de_porta(N, M)
